@@ -305,6 +305,7 @@ const generateEmailTemplate = (employee, CongViec) => {
                     <p>Ngày kết thúc công việc: <span class="highlight">${new Date(
                       CongViec.thoiGianKetThuc
                     ).toLocaleDateString()}</span></p>
+                                        <a href="https://job-assignment-manager-deploy.vercel.app/taskassignment" class="cta-button">Xem chi tiết công việc</a>
                     <p>Vui lòng kiểm tra lại chi tiết trong hệ thống quản lý công việc của chúng tôi.</p>
                     <p>Trân trọng,</p>
                     <p>Đội ngũ quản lý dự án</p>
