@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: `https://e05a-171-253-143-154.ngrok-free.app/api/`,
+  baseURL: `https://5bf1-118-69-34-165.ngrok-free.app/api/`,
   headers: {
     "Content-type": "application/json",
   },
@@ -70,7 +70,7 @@ async function refreshToken() {
   const refreshToken = tmp?.refreshToken;
   if (!refreshToken) throw new Error("No refresh token available");
   const response = await axios.post(
-    `https://localhost:7131/api/Authentication/RefreshToken`,
+    `https://5bf1-118-69-34-165.ngrok-free.app/api/Authentication/RefreshToken`,
     {
       expiredToken: token,
       refreshToken: refreshToken,
