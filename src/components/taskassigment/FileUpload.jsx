@@ -72,7 +72,7 @@ const FileUpload = ({ isOpen, onRequestClose, maPhanCong,maCongViec}) => {
         formData.append("file", file);
 
         return axios
-          .post("https://localhost:7131/api/FileUpload/Upload", formData, {
+          .post("https://5bf1-118-69-34-165.ngrok-free.app/api/FileUpload/Upload", formData, {
             onUploadProgress: (progressEvent) => {
               const percentCompleted = Math.round(
                 (progressEvent.loaded * 100) / progressEvent.total
