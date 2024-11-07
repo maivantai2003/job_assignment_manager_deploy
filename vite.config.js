@@ -7,6 +7,9 @@ export default defineConfig({
   // optimizeDeps: {
   //   include: ["gantt-task-react"],
   // },
+  build: {
+    outDir: 'build',  // Chỉ định thư mục đầu ra là 'build' thay vì 'dist'
+  },
   server: {
     port: 3000,
     proxy: {
