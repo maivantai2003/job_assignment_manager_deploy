@@ -377,7 +377,7 @@ const generateEmailTemplateForManager = (department, CongViec) => {
                       CongViec.thoiGianKetThuc
                     ).toLocaleDateString()}</span></p>
                     <p>Vui lòng kiểm tra lại chi tiết trong hệ thống quản lý công việc của chúng tôi.</p>
-                    <a href="http://localhost:3000/taskassignment" class="cta-button">Xem chi tiết công việc</a>
+                    <a href="https://job-assignment-manager-deploy.vercel.app/taskassignment" class="cta-button">Xem chi tiết công việc</a>
                     <p>Trân trọng,</p>
                     <p>Đội ngũ quản lý dự án</p>
                 </div>
@@ -449,7 +449,7 @@ function generateDeadlineNotification(taskName, dueDate) {
               Vui lòng kiểm tra lại và hoàn tất công việc trước thời hạn để đảm bảo
               tiến độ dự án.
             </p>
-            <a href="http://localhost:3000/taskassignment" class="cta-button"
+            <a href="https://job-assignment-manager-deploy.vercel.app/taskassignment" class="cta-button"
               >Xem Chi Tiết Công Việc</a>
           </div>
           <div class="footer">
