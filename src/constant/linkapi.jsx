@@ -1,5 +1,5 @@
-const API_URL="https://localhost:7131/api"
-const HUB_URL="https://localhost:7131/hub"
+const API_URL="https://e05a-171-253-143-154.ngrok-free.app/api"
+const HUB_URL="https://e05a-171-253-143-154.ngrok-free.app/hub"
 const API_ENDPOINTS = {
     NHAVIEN:`${API_URL}/NhanVien`,
     PHONGBAN:`${API_URL}/PhongBan`,
