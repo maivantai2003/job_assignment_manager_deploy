@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.cell {
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+}
+
+.circle {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(203, 37, 156, 0.671);
+  box-shadow: 4px -40px 60px 5px rgb(40, 37, 203) inset;
+}
+
+.rotate-in-up-left {
+  animation: rotate-in-up-left 2s ease infinite;
+}
+
+@keyframes rotate-in-up-left {
+  0% {
+    transform-origin: left bottom;
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform-origin: left bottom;
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+.form-container {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* Custom Scrollbar Styles */
+/* Track */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #807c7c;
+  border-radius: 6px;
+  display: none;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #302f2f;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dots-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.dot:last-child {
+  margin-right: 0;
+}
+
+.dot:nth-child(1) {
+  animation-delay: -0.3s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: -0.1s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    background-color: #b3d4fc;
+    box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: #4b79e4;
+    box-shadow: 0 0 0 10px rgba(178, 212, 252, 0);
+  }
+
+  100% {
+    transform: scale(0.8);
+    background-color: #2584f8;
+    box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+  }
+}
+/**/
+.ViewContainer {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Button {
+  background-color: #007bff; /* Màu xanh lam */
+  color: white; /* Chữ trắng */
+  border: none;
+  padding: 10px 20px; /* Tăng kích thước padding */
+  margin: 0 4px; /* Giảm khoảng cách giữa các nút */
+  border-radius: 5px; /* Bo tròn các góc */
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Hiệu ứng chuyển đổi */
+}
+
+.Button:hover {
+  background-color: #0056b3; /* Màu xanh đậm khi hover */
+  transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+.Switch {
+  margin: 0 15px;
+  font-size: 14px;
+  font-family: "Arial, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Switch_Toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.Switch_Toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.Slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: background-color 0.4s;
+  border-radius: 30px; /* Bo tròn cho slider */
+}
+
+.Slider:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 21px;
+  left: 6px;
+  bottom: 4px;
+  background-color: white;
+  transition: transform 0.4s;
+  border-radius: 50%; /* Bo tròn cho vòng tròn */
+}
+
+input:checked + .Slider {
+  background-color: #2196f3; /* Màu xanh khi checked */
+}
+
+input:focus + .Slider {
+  box-shadow: 0 0 1px #2196f3; /* Bóng khi focus */
+}
+
+input:checked + .Slider:before {
+  transform: translateX(26px); /* Di chuyển vòng tròn khi checked */
+}
+
